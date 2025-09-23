@@ -1,11 +1,16 @@
-import { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { seoConfig } from '@/lib/seo';
-import './globals.css';
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { seoConfig } from "@/lib/seo";
+import { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -14,16 +19,16 @@ export const metadata: Metadata = {
   },
   description: seoConfig.description,
   keywords: seoConfig.keywords,
-  authors: [{ name: 'DeepVariance Research Lab' }],
-  creator: 'DeepVariance Research Lab',
-  publisher: 'DeepVariance Research Lab',
+  authors: [{ name: "DeepVariance Research Lab" }],
+  creator: "DeepVariance Research Lab",
+  publisher: "DeepVariance Research Lab",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    type: "website",
+    locale: "en_US",
     url: seoConfig.url,
     title: seoConfig.title,
     description: seoConfig.description,
@@ -38,18 +43,18 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: seoConfig.title,
     description: seoConfig.description,
     images: [`${seoConfig.url}/og-image.png`],
-    creator: '@deepvariance',
+    creator: "@deepvariance",
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
-  manifest: '/site.webmanifest',
+  manifest: "/site.webmanifest",
 };
 
 interface RootLayoutProps {
@@ -59,12 +64,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${dmSans.variable} antialiased`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
+          <main className="flex-grow">{children}</main>
           <Footer />
         </div>
       </body>

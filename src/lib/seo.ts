@@ -1,28 +1,29 @@
 export const seoConfig = {
-  title: 'DeepVariance Research Lab - Advancing AI Research',
-  siteName: 'DeepVariance Research Lab',
-  description: 'Leading artificial intelligence research lab pushing the boundaries of machine learning, deep learning, and computational intelligence through innovative research and collaboration.',
-  url: 'https://deepvariance.org',
+  title: "DeepVariance Research Lab - Advancing AI Research",
+  siteName: "DeepVariance Research Lab",
+  description:
+    "Leading artificial intelligence research lab pushing the boundaries of machine learning, deep learning, and computational intelligence through innovative research and collaboration.",
+  url: "https://deepvariance.org",
   keywords: [
-    'artificial intelligence',
-    'machine learning',
-    'deep learning',
-    'neural networks',
-    'computer vision',
-    'natural language processing',
-    'research lab',
-    'AI safety',
-    'reinforcement learning',
-    'quantum machine learning',
-    'scientific research',
-    'technology innovation'
+    "artificial intelligence",
+    "machine learning",
+    "deep learning",
+    "neural networks",
+    "computer vision",
+    "natural language processing",
+    "research lab",
+    "AI safety",
+    "reinforcement learning",
+    "quantum machine learning",
+    "scientific research",
+    "technology innovation",
   ],
   ogImage: {
-    url: '/og-image.png',
+    url: "/og-image.png",
     width: 1200,
     height: 630,
-    alt: 'DeepVariance Research Lab - Advancing AI Research'
-  }
+    alt: "DeepVariance Research Lab - Advancing AI Research",
+  },
 };
 
 export const generateMetadata = (page: {
@@ -32,12 +33,12 @@ export const generateMetadata = (page: {
   image?: string;
   url?: string;
 }) => {
-  const title = page.title 
+  const title = page.title
     ? `${page.title} | ${seoConfig.siteName}`
     : seoConfig.title;
-  
+
   const description = page.description || seoConfig.description;
-  const keywords = page.keywords 
+  const keywords = page.keywords
     ? [...seoConfig.keywords, ...page.keywords]
     : seoConfig.keywords;
   const image = page.image || seoConfig.ogImage.url;
@@ -46,7 +47,7 @@ export const generateMetadata = (page: {
   return {
     title,
     description,
-    keywords: keywords.join(', '),
+    keywords: keywords.join(", "),
     openGraph: {
       title,
       description,
@@ -60,15 +61,15 @@ export const generateMetadata = (page: {
           alt: seoConfig.ogImage.alt,
         },
       ],
-      locale: 'en_US',
-      type: 'website',
+      locale: "en_US",
+      type: "website",
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title,
       description,
       images: [`${seoConfig.url}${image}`],
-      creator: '@deepvariance',
+      creator: "@deepvariance",
     },
     robots: {
       index: true,
@@ -76,9 +77,9 @@ export const generateMetadata = (page: {
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
   };

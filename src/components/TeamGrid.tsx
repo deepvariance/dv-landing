@@ -1,85 +1,110 @@
-import { teamMembers } from '@/lib/constants';
+import { teamMembers } from "@/lib/constants";
 
 export default function TeamGrid() {
   return (
-    <section className="bg-white section-padding">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Meet Our Team
+    <section className="bg-primary section-padding relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-glow rounded-full blur-3xl opacity-10"></div>
+        <div className="absolute bottom-40 right-20 w-72 h-72 bg-gradient-glow rounded-full blur-3xl opacity-5"></div>
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-2xl"></div>
+      </div>
+
+      <div className="container-custom relative">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl text-white mb-6">
+            Meet Our{" "}
+            <span className="bg-gradient-to-r from-white to-accent-200 bg-clip-text text-transparent">
+              Research Team
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our diverse team of researchers, engineers, and thought leaders are 
-            dedicated to advancing the field of artificial intelligence.
+          <p className="text-xl text-accent-300 max-w-3xl mx-auto leading-relaxed">
+            Our diverse team of world-class researchers, engineers, and thought
+            leaders are pioneering the future of artificial intelligence through
+            groundbreaking innovation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
-            <div 
+            <div
               key={member.name}
-              className="group text-center"
-              style={{ 
-                animationDelay: `${index * 100}ms` 
+              className="group text-center animate-fade-in"
+              style={{
+                animationDelay: `${index * 150}ms`,
               }}
             >
-              <div className="card hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+              <div className="card-premium transition-all duration-500 group">
                 {/* Profile Image */}
-                <div className="relative mb-6">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-accent rounded-full 
-                                flex items-center justify-center overflow-hidden group-hover:scale-105 
-                                transition-transform duration-300">
-                    {member.image ? (
-                      <img 
-                        src={member.image} 
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <span className="text-3xl font-bold text-white">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    )}
+                <div className="relative mb-8">
+                  <div className="relative">
+                    <div
+                      className="w-36 h-36 mx-auto bg-gradient-to-br from-white to-accent-200 rounded-2xl 
+                                  flex items-center justify-center overflow-hidden group-hover:shadow-glow-lg 
+                                  transition-all duration-500 border border-glow relative"
+                    >
+                      {member.image ? (
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <span className="text-4xl font-bold text-primary">
+                          {member.name
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Glow Ring */}
+                    <div className="absolute inset-0 rounded-2xl border-2 border-glow opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-glow"></div>
                   </div>
-                  
+
                   {/* Status Indicator */}
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                    <div className="w-6 h-6 bg-green-500 rounded-full border-4 border-white 
-                                  flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+                    <div
+                      className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl border-4 border-primary 
+                                  flex items-center justify-center shadow-glow"
+                    >
+                      <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                     </div>
                   </div>
                 </div>
 
                 {/* Member Info */}
-                <div className="space-y-3">
-                  <h3 className="text-xl font-semibold text-primary group-hover:text-accent 
-                               transition-colors duration-200">
+                <div className="space-y-4">
+                  <h3
+                    className="text-xl font-bold text-white group-hover:text-accent-200 
+                               transition-colors duration-300"
+                  >
                     {member.name}
                   </h3>
-                  <p className="text-accent font-medium">
+                  <p className="text-accent-300 font-semibold text-sm tracking-wide uppercase">
                     {member.role}
                   </p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-accent-400 text-sm leading-relaxed px-2">
                     {member.bio}
                   </p>
                 </div>
 
                 {/* Research Interests */}
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <div className="flex flex-wrap gap-1 justify-center">
+                <div className="mt-6 pt-6 border-t border-glow">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {member.interests.slice(0, 3).map((interest) => (
-                      <span 
+                      <span
                         key={interest}
-                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full
-                                 group-hover:bg-accent-50 group-hover:text-accent 
-                                 transition-colors duration-200"
+                        className="px-3 py-1 glass text-accent-300 text-xs rounded-full
+                                 group-hover:bg-surface-light/80 group-hover:text-white group-hover:border-glow-light
+                                 transition-all duration-300 border border-transparent"
                       >
                         {interest}
                       </span>
                     ))}
                     {member.interests.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                      <span className="px-3 py-1 glass text-accent-400 text-xs rounded-full border border-glow">
                         +{member.interests.length - 3}
                       </span>
                     )}
@@ -87,7 +112,7 @@ export default function TeamGrid() {
                 </div>
 
                 {/* Social Links */}
-                <div className="mt-4 pt-4 border-t border-gray-100">
+                <div className="mt-6 pt-6 border-t border-glow">
                   <div className="flex justify-center space-x-3">
                     {member.social.map((link) => (
                       <a
@@ -95,12 +120,12 @@ export default function TeamGrid() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center
-                                 hover:bg-accent hover:text-white transition-colors duration-200
-                                 text-gray-600 text-sm"
+                        className="w-10 h-10 glass rounded-xl flex items-center justify-center
+                                 hover:bg-surface-light/80 hover:border-glow-light hover:text-white hover:scale-110
+                                 transition-all duration-300 text-accent-300 text-sm shadow-glow hover:shadow-glow-lg"
                         aria-label={`${member.name} on ${link.platform}`}
                       >
-                        <span className="text-xs font-semibold">
+                        <span className="text-xs font-bold">
                           {link.icon.slice(0, 2).toUpperCase()}
                         </span>
                       </a>
@@ -113,22 +138,31 @@ export default function TeamGrid() {
         </div>
 
         {/* Join Team CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gray-50 rounded-xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-primary mb-4">
-              Join Our Research Team
-            </h3>
-            <p className="text-gray-600 mb-6">
-              We're always looking for talented researchers and engineers to join our mission 
-              of advancing artificial intelligence research.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
-                View Open Positions
-              </button>
-              <button className="btn-secondary">
-                Submit Application
-              </button>
+        <div className="text-center mt-20">
+          <div className="glass p-12 rounded-3xl max-w-3xl mx-auto border border-glow relative overflow-hidden">
+            {/* Background Glow */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-glow rounded-full blur-3xl opacity-20"></div>
+
+            <div className="relative">
+              <h3 className="text-3xl text-white mb-6">
+                Join Our{" "}
+                <span className="bg-gradient-to-r from-white to-accent-200 bg-clip-text text-transparent">
+                  Research Mission
+                </span>
+              </h3>
+              <p className="text-accent-300 mb-8 leading-relaxed text-lg">
+                We're actively seeking exceptional researchers and engineers to
+                join our quest of pushing the boundaries of artificial
+                intelligence research.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <button className="btn-primary px-8 py-4 text-lg">
+                  Explore Open Positions
+                </button>
+                <button className="btn-secondary px-8 py-4 text-lg">
+                  Submit Your Application
+                </button>
+              </div>
             </div>
           </div>
         </div>

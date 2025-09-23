@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { navItems } from '@/lib/constants';
+import { navItems } from "@/lib/constants";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,18 +12,18 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="glass-navbar border-b border-glow sticky top-0 z-50 backdrop-blur-md">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            href="/" 
-            className="flex items-center space-x-2 text-primary font-bold text-xl hover:text-primary-700 transition-colors"
+          <Link
+            href="/"
+            className="flex items-center space-x-3 text-white font-bold text-xl hover:text-accent-100 transition-all duration-300 group"
           >
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">DV</span>
-            </div>
-            <span>DeepVariance</span>
+            <span className="text-xl tracking-tight">
+              <span className="font-bold">deep</span>
+              <span className="font-light">variance</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,29 +32,38 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 relative group"
+                className="nav-link text-lg"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
               </Link>
             ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link href="/contact" className="btn-ghost px-6 py-2 text-sm">
+              Get In Touch
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-primary focus:outline-none focus:text-primary transition-colors"
+              className="text-accent-300 hover:text-white focus:outline-none focus:text-white transition-all duration-300 p-2 hover:bg-surface-light/50"
               aria-label="Toggle navigation menu"
             >
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 transition-transform duration-300"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                style={{
+                  transform: isMenuOpen ? "rotate(90deg)" : "rotate(0deg)",
+                }}
               >
                 {isMenuOpen ? (
                   <path d="M6 18L18 6M6 6l12 12" />
@@ -68,18 +77,30 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-white">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
+          <div className="md:hidden border-t border-glow animate-fade-in">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-surface-light/30 backdrop-blur-md">
+              {navItems.map((item, index) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors duration-200 rounded-md"
+                  className="block px-4 py-3 text-accent-300 hover:text-white hover:bg-surface-light/50 font-medium transition-all duration-300 backdrop-blur-sm border border-transparent hover:border-glow"
                   onClick={() => setIsMenuOpen(false)}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
                 >
                   {item.label}
                 </Link>
               ))}
+              <div className="pt-4 border-t border-glow mt-4">
+                <Link
+                  href="/contact"
+                  className="block w-full text-center btn-secondary py-3 text-sm"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get In Touch
+                </Link>
+              </div>
             </div>
           </div>
         )}

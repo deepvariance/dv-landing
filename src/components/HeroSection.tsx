@@ -1,81 +1,120 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gradient-primary text-white overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }}></div>
+    <section className="relative bg-black text-white overflow-hidden min-h-[85vh] flex items-center">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-glow rounded-full blur-3xl animate-float"></div>
+        <div
+          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-glow rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-glow rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "4s" }}
+        ></div>
       </div>
-      
-      <div className="relative container-custom section-padding">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Main Heading */}
-          <div className="space-y-4 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-              DeepVariance
-              <span className="block text-accent mt-2">Research Lab</span>
-            </h1>
-            <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+
+      {/* Grid Pattern Overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+            backgroundSize: "50px 50px",
+          }}
+        ></div>
+      </div>
+
+      <div className="relative container-custom py-12 md:py-16">
+        <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[60vh]">
+          {/* Left Column - Content */}
+          <div className="space-y-8 text-center lg:text-left">
+            {/* Main Heading */}
+            <div className="space-y-6 animate-fade-in">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-white text-shadow">
+                  High-Scale AI,
+                  <br />
+                  Low-Cost Compute.
+                </h1>
+                <div className="w-32 h-1 bg-gradient-to-r from-white to-accent-300 mx-auto lg:mx-0 rounded-full shadow-glow"></div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="animate-slide-up" style={{ animationDelay: "0s" }}>
+              <p className="text-lg md:text-xl lg:text-2xl text-accent-200 leading-relaxed font-light">
+                DeepVariance builds automated systems to make AI & deep learning
+                faster, cheaper, and more sustainable — so innovation can happen
+                without breaking the bank.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div
+              className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center animate-slide-up"
+              style={{ animationDelay: "0s" }}
+            >
+              <Link
+                href="/contact"
+                className="btn-primary text-lg px-8 py-4 shadow-dark-lg"
+              >
+                Get Involved
+              </Link>
+              <Link href="/about" className="btn-secondary text-lg px-8 py-4">
+                How It Works
+              </Link>
+            </div>
           </div>
 
-          {/* Description */}
-          <p className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto animate-slide-up">
-            Pioneering the future of artificial intelligence through groundbreaking research 
-            in machine learning, deep learning, and computational intelligence. We bridge 
-            the gap between theoretical advances and real-world applications.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-slide-up">
-            <Link 
-              href="/research"
-              className="btn-primary bg-accent hover:bg-accent-600 px-8 py-4 text-lg font-semibold
-                       transform hover:scale-105 transition-all duration-200 shadow-lg"
-            >
-              Explore Our Research
-            </Link>
-            <Link 
-              href="/publications"
-              className="btn-secondary border-white text-white hover:bg-white hover:text-primary
-                       px-8 py-4 text-lg font-semibold transform hover:scale-105 
-                       transition-all duration-200"
-            >
-              View Publications
-            </Link>
+          {/* Right Column - Video Animation */}
+          <div
+            className="relative flex items-center justify-center lg:justify-end animate-fade-in"
+            style={{ animationDelay: "0s" }}
+          >
+            <div className="relative w-full max-w-lg aspect-square">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover rounded-2xl shadow-2xl"
+              >
+                <source src="/nodes.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
+        </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 border-t border-primary-700 mt-16">
-            <div className="text-center space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-accent">50+</div>
-              <div className="text-gray-300">Research Papers</div>
+        {/* Stats */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 mt-12 animate-slide-up max-w-4xl mx-auto"
+          style={{ animationDelay: "1.2s" }}
+        >
+          <div className="glass p-6 text-center space-y-3 glow-on-hover">
+            <div className="text-3xl md:text-4xl text-white">50+</div>
+            <div className="text-accent-300 text-base">Research Papers</div>
+          </div>
+          <div className="glass p-6 text-center space-y-3 glow-on-hover">
+            <div className="text-3xl md:text-4xl text-white">15+</div>
+            <div className="text-accent-300 text-base">
+              Active Research Areas
             </div>
-            <div className="text-center space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-accent">15+</div>
-              <div className="text-gray-300">Research Areas</div>
-            </div>
-            <div className="text-center space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-accent">25+</div>
-              <div className="text-gray-300">Collaborations</div>
+          </div>
+          <div className="glass p-6 text-center space-y-3 glow-on-hover">
+            <div className="text-3xl md:text-4xl text-white">25+</div>
+            <div className="text-accent-300 text-base">
+              Global Collaborations
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg 
-          viewBox="0 0 1200 120" 
-          preserveAspectRatio="none" 
-          className="relative block w-full h-16 fill-white"
-        >
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-        </svg>
-      </div>
+      {/* Bottom Gradient Transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-light to-transparent"></div>
     </section>
   );
 }
