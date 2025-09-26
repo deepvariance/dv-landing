@@ -12,15 +12,15 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="glass-navbar border-b border-glow sticky top-0 z-50 backdrop-blur-md">
+    <nav className="glass-navbar border-b border-glow sticky top-0 z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-3 text-white font-bold text-xl hover:text-accent-100 transition-all duration-300 group"
+            className="flex items-center space-x-3 text-white font-bold text-xl hover:text-accent-100 group"
           >
-            <span className="text-xl tracking-tight">
+            <span className="text-x tracking-tighter">
               <span className="font-bold">deep</span>
               <span className="font-light">variance</span>
             </span>
@@ -29,11 +29,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="nav-link text-lg"
-              >
+              <Link key={item.href} href={item.href} className="nav-link">
                 {item.label}
               </Link>
             ))}
@@ -41,7 +37,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link href="/contact" className="btn-ghost px-6 py-2 text-sm">
+            <Link href="/contact#contact-form" className="btn-ghost px-6 py-2">
               Get In Touch
             </Link>
           </div>
@@ -50,11 +46,11 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-accent-300 hover:text-white focus:outline-none focus:text-white transition-all duration-300 p-2 hover:bg-surface-light/50"
+              className="text-accent-300 hover:text-white focus:outline-none p-2 hover:bg-surface-light/50"
               aria-label="Toggle navigation menu"
             >
               <svg
-                className="w-6 h-6 transition-transform duration-300"
+                className="w-6 h-6"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -62,7 +58,7 @@ export default function Navbar() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 style={{
-                  transform: isMenuOpen ? "rotate(90deg)" : "rotate(0deg)",
+                  transform: isMenuOpen ? "rotate(90deg)" : "rotate(0deg)"
                 }}
               >
                 {isMenuOpen ? (
@@ -77,16 +73,16 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-glow animate-fade-in">
-            <div className="px-4 pt-4 pb-6 space-y-2 bg-surface-light/30 backdrop-blur-md">
+          <div className="md:hidden border-t border-glow">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-surface-light/30">
               {navItems.map((item, index) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-4 py-3 text-accent-300 hover:text-white hover:bg-surface-light/50 font-medium transition-all duration-300 backdrop-blur-sm border border-transparent hover:border-glow"
+                  className="block px-4 py-3 text-accent-300 hover:text-white hover:bg-surface-light/50 font-medium border border-transparent hover:border-glow"
                   onClick={() => setIsMenuOpen(false)}
                   style={{
-                    animationDelay: `${index * 100}ms`,
+                    animationDelay: `${index * 100}ms`
                   }}
                 >
                   {item.label}
@@ -94,8 +90,8 @@ export default function Navbar() {
               ))}
               <div className="pt-4 border-t border-glow mt-4">
                 <Link
-                  href="/contact"
-                  className="block w-full text-center btn-secondary py-3 text-sm"
+                  href="/contact#contact-form"
+                  className="block w-full text-center btn-secondary py-3"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get In Touch

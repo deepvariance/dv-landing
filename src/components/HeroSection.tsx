@@ -58,7 +58,7 @@ export default function HeroSection() {
               style={{ animationDelay: "0s" }}
             >
               <Link
-                href="/contact"
+                href="/contact#contact-form"
                 className="btn-primary text-lg px-8 py-4 shadow-dark-lg"
               >
                 Get Involved

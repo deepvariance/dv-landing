@@ -2,19 +2,15 @@
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Research", href: "/research" },
-  { label: "Publications", href: "/publications" },
-  { label: "Contact", href: "/contact" },
+  { label: "Arayci", href: "/arayci" },
 ];
 
 // Footer links
 export const footerLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Research Areas", href: "/research" },
-  { label: "Publications", href: "/publications" },
+  { label: "Arayci", href: "/arayci" },
   { label: "Team", href: "/about#team" },
   { label: "Contact", href: "/contact" },
-  { label: "Careers", href: "/careers" },
 ];
 
 // Social media links

@@ -119,7 +119,8 @@
   }
 
   .section-padding {
-    @apply py-20 md:py-32;
+    /* Reduced vertical padding from py-20/md:py-32 to py-16/md:py-24 */
+    @apply py-16 md:py-24;
   }
 
   /* Glass Effect */

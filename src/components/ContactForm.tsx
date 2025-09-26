@@ -69,7 +69,10 @@ export default function ContactForm() {
   ];
 
   return (
-    <section className="bg-primary section-padding relative overflow-hidden">
+    <section
+      id="contact-form"
+      className="bg-primary section-padding relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-glow rounded-full blur-3xl opacity-10"></div>
@@ -87,9 +90,9 @@ export default function ContactForm() {
               </span>
             </h2>
             <p className="text-xl text-accent-300 max-w-3xl mx-auto leading-relaxed">
-              Ready to collaborate on groundbreaking research? We'd love to
-              connect with you. Send us a message and we'll respond as soon as
-              possible.
+              Ready to collaborate on groundbreaking research? We&#39;d love to
+              connect with you. Send us a message and we&#39;ll respond as soon
+              as possible.
             </p>
           </div>
 
@@ -119,10 +122,10 @@ export default function ContactForm() {
                     <div>
                       <h4 className="text-xl text-white mb-2">Office Hours</h4>
                       <p className="text-accent-300 text-lg">
-                        contact@deepvariance.org
+                        contact@deepvariance.com
                       </p>
                       <p className="text-accent-400">
-                        research@deepvariance.org
+                        research@deepvariance.com
                       </p>
                     </div>
                   </div>
@@ -193,9 +196,9 @@ export default function ContactForm() {
                     For Research Inquiries
                   </h4>
                   <p className="text-accent-300 leading-relaxed">
-                    If you're interested in collaborating on research projects
-                    or have specific technical questions, please include
-                    relevant details about your research background and
+                    If you&#39;re interested in collaborating on research
+                    projects or have specific technical questions, please
+                    include relevant details about your research background and
                     interests in your message.
                   </p>
                 </div>
@@ -386,7 +389,7 @@ export default function ContactForm() {
                       </span>
                     </div>
                     <p className="text-green-300 mt-2">
-                      We'll get back to you within 24-48 hours.
+                      We&#39;ll get back to you within 24-48 hours.
                     </p>
                   </div>
                 )}
@@ -411,7 +414,7 @@ export default function ContactForm() {
                     </div>
                     <p className="text-red-300 mt-2">
                       Please try again or contact us directly at
-                      contact@deepvariance.org
+                      contact@deepvariance.com
                     </p>
                   </div>
                 )}

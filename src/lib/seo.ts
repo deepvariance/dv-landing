@@ -2,8 +2,8 @@ export const seoConfig = {
   title: "DeepVariance Research Lab - Advancing AI Research",
   siteName: "DeepVariance Research Lab",
   description:
-    "Leading artificial intelligence research lab pushing the boundaries of machine learning, deep learning, and computational intelligence through innovative research and collaboration.",
-  url: "https://deepvariance.org",
+    "DeepVariance is an AI research lab pioneering data science and computational intelligence to build scalable, cost-effective AI pipelines.",
+  url: "https://deepvariance.com",
   keywords: [
     "artificial intelligence",
     "machine learning",

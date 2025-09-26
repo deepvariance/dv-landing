@@ -71,10 +71,10 @@ export default function Footer() {
                   <span className="font-semibold text-white">Email:</span>
                 </p>
                 <a
-                  href="mailto:contact@deepvariance.org"
+                  href="mailto:contact@deepvariance.com"
                   className="text-accent-300 hover:text-white transition-colors duration-300 block"
                 >
-                  contact@deepvariance.org
+                  contact@deepvariance.com
                 </a>
               </div>
               <div className="space-y-2">
@@ -135,7 +135,7 @@ export default function Footer() {
         <div className="border-t border-glow pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <p className="text-accent-400 text-center md:text-left">
-              © {currentYear} DeepVariance Research Lab. All rights reserved.
+              © {currentYear} DeepVariance. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-8 text-sm">
               <Link

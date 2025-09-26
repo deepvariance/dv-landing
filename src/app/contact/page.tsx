@@ -227,7 +227,7 @@ export default function ContactPage() {
                 name: "Dr. Sarah Chen",
                 role: "Research Director",
                 speciality: "Deep Learning & Neural Networks",
-                email: "s.chen@deepvariance.org",
+                email: "s.chen@deepvariance.com",
                 phone: "+1 (555) 123-4567",
                 availability:
                   "Available for research collaborations and partnerships",
@@ -236,7 +236,7 @@ export default function ContactPage() {
                 name: "Dr. Michael Rodriguez",
                 role: "Principal Scientist",
                 speciality: "Computer Vision & AI Safety",
-                email: "m.rodriguez@deepvariance.org",
+                email: "m.rodriguez@deepvariance.com",
                 phone: "+1 (555) 123-4568",
                 availability:
                   "Available for technical consultations and media inquiries",
@@ -245,7 +245,7 @@ export default function ContactPage() {
                 name: "Dr. Emily Watson",
                 role: "Lab Manager",
                 speciality: "Operations & Partnerships",
-                email: "e.watson@deepvariance.org",
+                email: "e.watson@deepvariance.com",
                 phone: "+1 (555) 123-4569",
                 availability:
                   "Available for administrative and partnership inquiries",
