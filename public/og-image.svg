@@ -1,0 +1,9 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A2540"/>
+  <text x="600" y="315" text-anchor="middle" dominant-baseline="middle" fill="#00BFFF" font-family="Arial, sans-serif" font-size="48" font-weight="bold">
+    DeepVariance Research Lab
+  </text>
+  <text x="600" y="380" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">
+    Advancing AI Research Through Deep Learning Innovation
+  </text>
+</svg>
