@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove appDir since it's now stable in Next.js 14
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      use: ["@svgr/webpack"]
+    });
+    return config;
+  }
 };
 
 module.exports = nextConfig;
