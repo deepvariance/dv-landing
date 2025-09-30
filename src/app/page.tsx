@@ -1,11 +1,10 @@
 import HeroSection from "@/components/HeroSection";
-import Link from "next/link";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <section className="section-padding bg-primary">
+      {/* <section className="section-padding bg-primary">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl text-white">
@@ -20,7 +19,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

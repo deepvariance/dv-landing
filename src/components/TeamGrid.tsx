@@ -1,3 +1,6 @@
+import GitHubIcon from "@/assets/github.svg";
+import LinkedInIcon from "@/assets/linkedin.svg";
+import XIcon from "@/assets/x.svg";
 import { teamMembers } from "@/lib/constants";
 
 export default function TeamGrid() {
@@ -40,7 +43,7 @@ export default function TeamGrid() {
                     <div className="w-36 h-36 mx-auto bg-gradient-to-br from-white to-accent-200 rounded-2xl flex items-center justify-center overflow-hidden border border-glow relative">
                       {member.image ? (
                         <img
-                          src={member.image}
+                          src={`/avatars/${member.image}`}
                           alt={member.name}
                           className="w-full h-full object-cover"
                         />
@@ -83,7 +86,13 @@ export default function TeamGrid() {
                         aria-label={`${member.name} on ${link.platform}`}
                       >
                         <span className="text-xs font-bold">
-                          {link.icon.slice(0, 2).toUpperCase()}
+                          {link.icon === "x" ? (
+                            <XIcon />
+                          ) : link.icon === "linkedin" ? (
+                            <LinkedInIcon />
+                          ) : link.icon === "github" ? (
+                            <GitHubIcon />
+                          ) : null}
                         </span>
                       </a>
                     ))}

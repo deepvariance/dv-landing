@@ -1,3 +1,6 @@
+import GitHubIcon from "@/assets/github.svg";
+import LinkedInIcon from "@/assets/linkedin.svg";
+import XIcon from "@/assets/x.svg";
 import { footerLinks, socialLinks } from "@/lib/constants";
 import Link from "next/link";
 
@@ -29,7 +32,7 @@ export default function Footer() {
               innovative research in machine learning, deep learning, and
               computational intelligence.
             </p>
-            <div className="flex space-x-6">
+            {/* <div className="flex space-x-6">
               <div className="glass p-4 rounded-xl">
                 <div className="text-2xl font-bold text-white">50+</div>
                 <div className="text-accent-400 text-sm">Papers</div>
@@ -42,7 +45,7 @@ export default function Footer() {
                 <div className="text-2xl font-bold text-white">25+</div>
                 <div className="text-accent-400 text-sm">Partners</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -97,12 +100,12 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="w-12 h-12 glass rounded-xl flex items-center justify-center 
                              hover:bg-surface-light/70 hover:border-glow-light transition-all duration-300 
-                             group hover:scale-110 shadow-glow hover:shadow-glow-lg"
+                             groupshadow-glow hover:shadow-glow-lg"
                     aria-label={`Visit our ${social.name}`}
                   >
-                    <span className="text-sm font-bold text-accent-300 group-hover:text-white transition-colors duration-300">
-                      {social.icon.slice(0, 2).toUpperCase()}
-                    </span>
+                    {social.icon === "x" && <XIcon />}
+                    {social.icon === "linkedin" && <LinkedInIcon />}
+                    {social.icon === "github" && <GitHubIcon />}
                   </a>
                 ))}
               </div>

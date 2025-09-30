@@ -22,7 +22,7 @@ export default function HeroSection() {
           className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-            backgroundSize: "50px 50px",
+            backgroundSize: "50px 50px"
           }}
         ></div>
       </div>
@@ -90,7 +90,7 @@ export default function HeroSection() {
         </div>
 
         {/* Stats */}
-        <div
+        {/* <div
           className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 mt-12 animate-slide-up max-w-4xl mx-auto"
           style={{ animationDelay: "1.2s" }}
         >
@@ -110,7 +110,7 @@ export default function HeroSection() {
               Global Collaborations
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Bottom Gradient Transition */}
