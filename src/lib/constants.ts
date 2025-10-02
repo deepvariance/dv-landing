@@ -72,14 +72,20 @@ export const teamMembers = [
     image: "girish-m-saraswathipura.jpg",
     social: [
       {
-        platform: "Twitter",
-        url: "https://twitter.com/girishsaras",
-        icon: "x" as const
+        platform: "Email",
+        url: "mailto:founders@deepvariance.com",
+        icon: "email" as const
       },
       {
         platform: "LinkedIn",
-        url: "https://linkedin.com/in/girishsaras",
+        url: "https://www.linkedin.com/in/girish-m-s/",
         icon: "linkedin" as const
+      },
+
+      {
+        platform: "GitHub",
+        url: "https://github.com/girish-m-s",
+        icon: "github" as const
       }
     ]
   },
@@ -88,6 +94,11 @@ export const teamMembers = [
     role: "Head of Engineering",
     image: "saaivignesh-premanand.jpg",
     social: [
+      {
+        platform: "Email",
+        url: "mailto:founders@deepvariance.com",
+        icon: "email" as const
+      },
       {
         platform: "LinkedIn",
         url: "https://linkedin.com/in/saaivigneshp",
@@ -106,8 +117,13 @@ export const teamMembers = [
     image: "rohan-kottamasu.jpg",
     social: [
       {
+        platform: "Email",
+        url: "mailto:rohan.kottamasu@deepvariance.com",
+        icon: "email" as const
+      },
+      {
         platform: "LinkedIn",
-        url: "https://linkedin.com/in/rohan-kottamasu",
+        url: "https://www.linkedin.com/in/rohankottamasu/",
         icon: "linkedin" as const
       }
     ]
@@ -118,14 +134,19 @@ export const teamMembers = [
     image: "amit-subhash.jpg",
     social: [
       {
-        platform: "Twitter",
-        url: "https://twitter.com/amit_subhash",
-        icon: "x" as const
+        platform: "Email",
+        url: "mailto:founders@deepvariance.com",
+        icon: "email" as const
       },
       {
         platform: "LinkedIn",
-        url: "https://linkedin.com/in/amit-subhash",
+        url: "https://www.linkedin.com/in/amitsubhash/",
         icon: "linkedin" as const
+      },
+      {
+        platform: "GitHub",
+        url: "https://github.com/amitsubhash",
+        icon: "github" as const
       }
     ]
   }

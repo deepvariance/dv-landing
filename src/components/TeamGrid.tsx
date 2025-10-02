@@ -1,7 +1,8 @@
+import EmailIcon from "@/assets/email.svg";
 import GitHubIcon from "@/assets/github.svg";
 import LinkedInIcon from "@/assets/linkedin.svg";
-import XIcon from "@/assets/x.svg";
 import { teamMembers } from "@/lib/constants";
+import Image from "next/image";
 
 export default function TeamGrid() {
   return (
@@ -15,15 +16,10 @@ export default function TeamGrid() {
       <div className="container-custom">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl text-white mb-6">
-            Meet Our{" "}
-            <span className="bg-gradient-to-r from-white to-accent-200 bg-clip-text text-transparent">
-              Research Team
-            </span>
+            Meet Our Research Team
           </h2>
           <p className="text-xl text-accent-300 mx-auto">
-            Our diverse team of world-class researchers, engineers, and thought
-            leaders are pioneering the future of artificial intelligence through
-            groundbreaking innovation.
+            A closer look at the minds shaping ideas into reality.
           </p>
         </div>
 
@@ -42,9 +38,16 @@ export default function TeamGrid() {
                   <div className="relative">
                     <div className="w-36 h-36 mx-auto bg-gradient-to-br from-white to-accent-200 rounded-2xl flex items-center justify-center overflow-hidden border border-glow relative">
                       {member.image ? (
-                        <img
+                        // <img
+                        //   src={`/avatars/${member.image}`}
+                        //   alt={member.name}
+                        //   className="w-full h-full object-cover"
+                        // />
+                        <Image
                           src={`/avatars/${member.image}`}
                           alt={member.name}
+                          width={142}
+                          height={142}
                           className="w-full h-full object-cover"
                         />
                       ) : (
@@ -85,14 +88,13 @@ export default function TeamGrid() {
                         className="w-10 h-10 glass rounded-xl flex items-center justify-center text-accent-300 text-sm shadow-glow"
                         aria-label={`${member.name} on ${link.platform}`}
                       >
-                        <span className="text-xs font-bold">
-                          {link.icon === "x" ? (
-                            <XIcon />
-                          ) : link.icon === "linkedin" ? (
-                            <LinkedInIcon />
-                          ) : link.icon === "github" ? (
-                            <GitHubIcon />
-                          ) : null}
+                        <span
+                          className="text-xs font-bold"
+                          title={link.platform}
+                        >
+                          {link.icon === "linkedin" && <LinkedInIcon />}
+                          {link.icon === "github" && <GitHubIcon />}
+                          {link.icon === "email" && <EmailIcon />}
                         </span>
                       </a>
                     ))}
