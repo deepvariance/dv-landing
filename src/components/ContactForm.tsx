@@ -44,13 +44,16 @@ export default function ContactForm() {
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
 
-      const response = await fetch("https://formsubmit.co/thisissaaivignesh@gmail.com", {
-        method: "POST",
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
+      const response = await fetch(
+        "https://formsubmit.co/founders@deepvariance.com",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
         }
-      });
+      );
 
       if (response.ok) {
         setSubmitStatus("success");
@@ -136,7 +139,9 @@ export default function ContactForm() {
                   />
                 </svg>
               </div>
-              <h4 className="text-lg text-white font-semibold">Response Time</h4>
+              <h4 className="text-lg text-white font-semibold">
+                Response Time
+              </h4>
               <p className="text-accent-300">Within 24-48 hours</p>
             </div>
           </div>
@@ -145,13 +150,20 @@ export default function ContactForm() {
           <div className="glass p-8 rounded-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* FormSubmit Configuration */}
-              <input type="hidden" name="_subject" value="New Contact Form Submission - DeepVariance" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Contact Form Submission - DeepVariance"
+              />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-white mb-2 text-sm font-medium">
+                  <label
+                    htmlFor="name"
+                    className="block text-white mb-2 text-sm font-medium"
+                  >
                     Name *
                   </label>
                   <input
@@ -166,7 +178,10 @@ export default function ContactForm() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-white mb-2 text-sm font-medium">
+                  <label
+                    htmlFor="email"
+                    className="block text-white mb-2 text-sm font-medium"
+                  >
                     Email *
                   </label>
                   <input
@@ -183,7 +198,10 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="organization" className="block text-white mb-2 text-sm font-medium">
+                <label
+                  htmlFor="organization"
+                  className="block text-white mb-2 text-sm font-medium"
+                >
                   Organization
                 </label>
                 <input
@@ -198,7 +216,10 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-white mb-2 text-sm font-medium">
+                <label
+                  htmlFor="subject"
+                  className="block text-white mb-2 text-sm font-medium"
+                >
                   Subject *
                 </label>
                 <select
@@ -219,7 +240,10 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white mb-2 text-sm font-medium">
+                <label
+                  htmlFor="message"
+                  className="block text-white mb-2 text-sm font-medium"
+                >
                   Message *
                 </label>
                 <textarea
