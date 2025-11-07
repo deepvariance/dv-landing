@@ -1,7 +1,6 @@
 import GitHubIcon from "@/assets/github.svg";
 import LinkedInIcon from "@/assets/linkedin.svg";
-import XIcon from "@/assets/x.svg";
-import { footerLinks, socialLinks } from "@/lib/constants";
+import { socialLinks } from "@/lib/constants";
 import Link from "next/link";
 
 export default function Footer() {
@@ -64,7 +63,7 @@ export default function Footer() {
                              groupshadow-glow hover:shadow-glow-lg"
                     aria-label={`Visit our ${social.name}`}
                   >
-                    {social.icon === "x" && <XIcon />}
+
                     {social.icon === "linkedin" && <LinkedInIcon />}
                     {social.icon === "github" && <GitHubIcon />}
                   </a>
