@@ -1,11 +1,3 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Publications",
-  description:
-    "Browse our latest research publications, papers, and contributions to the scientific community.",
-};
-
 export default function PublicationsPage() {
   return (
     <>

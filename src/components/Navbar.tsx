@@ -36,7 +36,7 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center space-x-4">
             <Link href="/contact#contact-form" className="btn-ghost px-6 py-2">
               Get In Touch
             </Link>

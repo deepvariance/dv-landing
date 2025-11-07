@@ -1,8 +1,8 @@
 export const seoConfig = {
-  title: "DeepVariance Research Lab - Advancing AI Research",
-  siteName: "DeepVariance Research Lab",
+  title: "DeepVariance - Your Machine Learning Consultant",
+  siteName: "DeepVariance",
   description:
-    "DeepVariance is an AI research lab pioneering data science and computational intelligence to build scalable, cost-effective AI pipelines.",
+    "DeepVariance turns your data into engineered AI solutions. A faster, cheaper, and easier way to incorporate machine learning into your business.",
   url: "https://deepvariance.com",
   keywords: [
     "artificial intelligence",
@@ -11,18 +11,18 @@ export const seoConfig = {
     "neural networks",
     "computer vision",
     "natural language processing",
-    "research lab",
-    "AI safety",
-    "reinforcement learning",
-    "quantum machine learning",
-    "scientific research",
+    "ML consultant",
+    "AI solutions",
+    "AutoML",
+    "predictive models",
+    "data science",
     "technology innovation",
   ],
   ogImage: {
     url: "/og-image.png",
     width: 1200,
     height: 630,
-    alt: "DeepVariance Research Lab - Advancing AI Research",
+    alt: "DeepVariance - Your Machine Learning Consultant",
   },
 };
 

@@ -1,26 +1,19 @@
 // Removed generic HeroSection import, adding custom About hero instead
 import TeamGrid from "@/components/TeamGrid";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "DeepVariance: mission, enterprise ML pipelines, and Arayci for scalable AI workflows."
-};
 
 export default function AboutPage() {
   const missionCards = [
     {
       icon: "🚀",
-      title: "Our Mission",
+      title: "What We Do",
       description:
-        "At DeepVariance, our mission is to transform the way machine learning is built and deployed in enterprises. We aim to eliminate inefficiencies in today’s ML workflows by replacing the slow, services-heavy consulting model with productized, repeatable pipelines that scale. We believe in turning experimentation into automation, and research breakthroughs into tools that businesses of all sizes can actually use."
+        "DeepVariance is an automated machine learning platform that transforms raw business data into production-ready models. We combine intelligent sampling with end-to-end AutoML to make enterprise-grade AI accessible and affordable—no specialized ML team required."
     },
     {
       icon: "🛠️",
-      title: "Current Focus",
+      title: "How It Works",
       description:
-        "Our current focus is the Arayci Platform, the first commercial expression of our vision. Arayci is a no-code, guided solution that enables businesses to transform raw data into deployable ML and DL models at a fraction of the cost and time. It automates the end-to-end process—from profiling and cleaning data to feature engineering, hyperparameter tuning, and model deployment—delivering exportable, cloud-ready artifacts. Unlike BI dashboards or expensive consultants, Arayci provides predictive models that drive decision-making, not just reports."
+        "DeepVariance automates the entire ML workflow: intelligent data sampling, preprocessing, feature engineering, model selection, hyperparameter tuning, and cloud deployment. Our research-backed approach delivers competitive accuracy at 25-30% lower compute cost and one-third of the resource usage compared to traditional methods."
     }
   ];
 
@@ -29,12 +22,9 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative bg-black text-white overflow-hidden section-padding flex items-center">
         <div className="container-custom text-center space-y-4">
-          <h1 className="text-5xl font-bold">About Us</h1>
+          <h1 className="text-5xl font-bold">About DeepVariance</h1>
           <p className="text-xl text-accent-200 mx-auto">
-            DeepVariance is an incubating lab transforming ML research into
-            enterprise-grade, repeatable pipelines. We build scalable AI
-            solutions grounded in data variance analysis and ethical, open
-            collaboration.
+            Making machine learning work for everyone who builds and runs a business.
           </p>
         </div>
       </section>
@@ -59,7 +49,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section (consolidated) */}
-      <TeamGrid />
+      {/* <TeamGrid /> */}
     </>
   );
 }

@@ -11,20 +11,18 @@ export default function Footer() {
     <footer className="bg-primary border-t border-glow relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-20 w-72 h-72 bg-gradient-glow rounded-full blur-3xl opacity-10"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-glow rounded-full blur-3xl opacity-5"></div>
+        <div className="absolute top-10 left-20 w-72 h-72 bg-gradient-glow rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-glow rounded-full blur-3xl opacity-15"></div>
       </div>
 
       <div className="container-custom section-padding relative">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          {/* Lab Info */}
-          <div className="md:col-span-2 space-y-8">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-white to-accent-200 rounded-xl flex items-center justify-center shadow-glow">
-                <span className="text-primary font-bold text-lg">DV</span>
-              </div>
-              <span className="font-bold text-2xl text-white">
-                DeepVariance
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          {/* Company Info */}
+          <div className="space-y-8">
+            <div className="flex items-center space-x-3 text-white">
+              <span className="text-3xl tracking-tighter">
+                <span className="font-bold">deep</span>
+                <span className="font-light">variance</span>
               </span>
             </div>
             <p className="text-accent-300 leading-relaxed text-lg max-w-md">
@@ -32,37 +30,6 @@ export default function Footer() {
               innovative research in machine learning, deep learning, and
               computational intelligence.
             </p>
-            {/* <div className="flex space-x-6">
-              <div className="glass p-4 rounded-xl">
-                <div className="text-2xl font-bold text-white">50+</div>
-                <div className="text-accent-400 text-sm">Papers</div>
-              </div>
-              <div className="glass p-4 rounded-xl">
-                <div className="text-2xl font-bold text-white">15+</div>
-                <div className="text-accent-400 text-sm">Areas</div>
-              </div>
-              <div className="glass p-4 rounded-xl">
-                <div className="text-2xl font-bold text-white">25+</div>
-                <div className="text-accent-400 text-sm">Partners</div>
-              </div>
-            </div> */}
-          </div>
-
-          {/* Quick Links */}
-          <div className="space-y-6">
-            <h3 className="text-xl text-white">Quick Links</h3>
-            <ul className="space-y-4">
-              {footerLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-accent-300 hover:text-white transition-all duration-300 hover:translate-x-1 transform inline-block"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Contact & Social */}
@@ -74,17 +41,11 @@ export default function Footer() {
                   <span className="font-semibold text-white">Email:</span>
                 </p>
                 <a
-                  href="mailto:contact@deepvariance.com"
+                  href="mailto:founders@deepvariance.com"
                   className="text-accent-300 hover:text-white transition-colors duration-300 block"
                 >
-                  contact@deepvariance.com
+                  founders@deepvariance.com
                 </a>
-              </div>
-              <div className="space-y-2">
-                <p className="text-accent-300">
-                  <span className="font-semibold text-white">Location:</span>
-                </p>
-                <p className="text-accent-300">San Francisco, CA</p>
               </div>
             </div>
 
@@ -98,8 +59,8 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 glass rounded-xl flex items-center justify-center 
-                             hover:bg-surface-light/70 hover:border-glow-light transition-all duration-300 
+                    className="w-12 h-12 glass rounded-xl flex items-center justify-center
+                             hover:bg-surface-light/70 hover:border-glow-light transition-all duration-300
                              groupshadow-glow hover:shadow-glow-lg"
                     aria-label={`Visit our ${social.name}`}
                   >
@@ -114,25 +75,34 @@ export default function Footer() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="glass p-8 rounded-2xl mb-16">
+        {/* <div className="glass p-8 rounded-2xl mb-16">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h3 className="text-2xl text-white">Stay Updated</h3>
             <p className="text-accent-300">
               Get the latest research updates and breakthroughs delivered to
               your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form
+              action="https://formsubmit.co/thisissaaivignesh@gmail.com"
+              method="POST"
+              className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+            >
+              <input type="hidden" name="_subject" value="New Newsletter Subscription - DeepVariance" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email"
+                required
                 className="input-premium flex-1 text-center sm:text-left"
               />
-              <button className="btn-primary px-6 py-3 text-sm">
+              <button type="submit" className="btn-primary px-6 py-3 text-sm">
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom Bar */}
         <div className="border-t border-glow pt-8">

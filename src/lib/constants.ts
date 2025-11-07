@@ -1,28 +1,16 @@
 // Navigation items
-export const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Arayci", href: "/arayci" }
-];
+export const navItems: { label: string; href: string }[] = [];
 
 // Footer links
 export const footerLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "Arayci", href: "/arayci" },
-  { label: "Team", href: "/about#team" },
   { label: "Contact", href: "/contact" }
 ];
 
 // Social media links
 export const socialLinks = [
   {
-    name: "X",
-    href: "https://twitter.com/deepvariance",
-    icon: "x" as const
-  },
-  {
     name: "LinkedIn",
-    href: "https://linkedin.com/company/deepvariance",
+    href: "https://www.linkedin.com/company/deep-variance",
     icon: "linkedin" as const
   },
   {

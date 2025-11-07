@@ -88,7 +88,7 @@ module.exports = {
         "gradient-dark": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)",
         "gradient-surface": "linear-gradient(135deg, #111111 0%, #1a1a1a 100%)",
         "gradient-glow":
-          "radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%)",
+          "radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(147, 51, 234, 0.1) 30%, transparent 70%)",
       },
       boxShadow: {
         glow: "0 0 20px rgba(255, 255, 255, 0.1)",

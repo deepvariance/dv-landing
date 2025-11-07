@@ -13,15 +13,12 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: seoConfig.title,
-    template: `%s | ${seoConfig.siteName}`,
-  },
+  title: "DeepVariance",
   description: seoConfig.description,
   keywords: seoConfig.keywords,
-  authors: [{ name: "DeepVariance Research Lab" }],
-  creator: "DeepVariance Research Lab",
-  publisher: "DeepVariance Research Lab",
+  authors: [{ name: "DeepVariance" }],
+  creator: "DeepVariance",
+  publisher: "DeepVariance",
   robots: {
     index: true,
     follow: true,

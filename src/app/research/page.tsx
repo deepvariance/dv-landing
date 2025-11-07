@@ -1,11 +1,3 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Research",
-  description:
-    "Explore our cutting-edge research in artificial intelligence, machine learning, and computational intelligence.",
-};
-
 export default function ResearchPage() {
   return (
     <>

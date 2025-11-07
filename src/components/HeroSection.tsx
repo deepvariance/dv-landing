@@ -1,18 +1,42 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5;
+    }
+  }, []);
+
   return (
-    <section className="relative bg-black text-white overflow-hidden min-h-[85vh] flex items-center">
+    <section className="relative bg-black text-white overflow-hidden min-h-[55vh] flex items-center">
+      {/* Video Background */}
+      <div className="absolute inset-0">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-20 blur-sm"
+        >
+          <source src="/nodes.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-glow rounded-full blur-3xl animate-float"></div>
         <div
           className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-glow rounded-full blur-3xl animate-float"
           style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-glow rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "4s" }}
         ></div>
       </div>
 
@@ -27,90 +51,37 @@ export default function HeroSection() {
         ></div>
       </div>
 
-      <div className="relative container-custom py-12 md:py-16">
-        <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[60vh]">
-          {/* Left Column - Content */}
-          <div className="space-y-8 text-center lg:text-left">
-            {/* Main Heading */}
-            <div className="space-y-6 animate-fade-in">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-white text-shadow">
-                  High-Scale AI,
-                  <br />
-                  Low-Cost Compute.
-                </h1>
-                <div className="w-32 h-1 bg-gradient-to-r from-white to-accent-300 mx-auto lg:mx-0 rounded-full shadow-glow"></div>
-              </div>
-            </div>
+      {/* Content Overlay */}
+      <div className="relative container-custom py-12 md:py-20 text-center z-10">
+        <div className="max-w-5xl mx-auto space-y-6 animate-fade-in px-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-white font-bold drop-shadow-2xl">
+            Enterprise-grade ML without enterprise complexity
+          </h1>
 
-            {/* Description */}
-            <div className="animate-slide-up" style={{ animationDelay: "0s" }}>
-              <p className="text-lg md:text-xl lg:text-2xl text-accent-200 leading-relaxed font-light">
-                DeepVariance builds automated systems to make AI & deep learning
-                faster, cheaper, and more sustainable — so innovation can happen
-                without breaking the bank.
-              </p>
-            </div>
+          <p className="text-xl md:text-2xl lg:text-3xl text-accent-100 leading-relaxed font-light max-w-3xl mx-auto drop-shadow-lg">
+            Deploy production-ready models in days, not months
+          </p>
 
-            {/* CTA Buttons */}
-            <div
-              className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center animate-slide-up"
-              style={{ animationDelay: "0s" }}
-            >
-              <Link
-                href="/contact#contact-form"
-                className="btn-primary text-lg px-8 py-4 shadow-dark-lg"
-              >
-                Get Involved
-              </Link>
-              <Link href="/about" className="btn-secondary text-lg px-8 py-4">
-                How It Works
-              </Link>
-            </div>
+          {/* CTA Button */}
+          <div className="flex justify-center items-center pt-6 animate-slide-up">
+            <Link href="/contact" className="btn-primary text-lg px-10 py-5 shadow-2xl hover:scale-105 transition-transform">
+              Contact Us
+            </Link>
           </div>
 
-          {/* Right Column - Video Animation */}
-          <div
-            className="relative flex items-center justify-center lg:justify-end animate-fade-in"
-            style={{ animationDelay: "0s" }}
-          >
-            <div className="relative w-full max-w-lg aspect-square">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
-              >
-                <source src="/nodes.webm" type="video/webm" />
-                Your browser does not support the video tag.
-              </video>
+          {/* Feature Pills */}
+          <div className="flex flex-wrap gap-4 justify-center pt-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <div className="glass px-6 py-3 rounded-full text-sm font-medium border border-accent-300/30">
+              25-30% Lower Costs
+            </div>
+            <div className="glass px-6 py-3 rounded-full text-sm font-medium border border-accent-300/30">
+              ⅓ Resources Needed
+            </div>
+            <div className="glass px-6 py-3 rounded-full text-sm font-medium border border-accent-300/30">
+              Research-Backed
             </div>
           </div>
         </div>
-
-        {/* Stats */}
-        {/* <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 mt-12 animate-slide-up max-w-4xl mx-auto"
-          style={{ animationDelay: "1.2s" }}
-        >
-          <div className="glass p-6 text-center space-y-3 glow-on-hover">
-            <div className="text-3xl md:text-4xl text-white">50+</div>
-            <div className="text-accent-300 text-base">Research Papers</div>
-          </div>
-          <div className="glass p-6 text-center space-y-3 glow-on-hover">
-            <div className="text-3xl md:text-4xl text-white">15+</div>
-            <div className="text-accent-300 text-base">
-              Active Research Areas
-            </div>
-          </div>
-          <div className="glass p-6 text-center space-y-3 glow-on-hover">
-            <div className="text-3xl md:text-4xl text-white">25+</div>
-            <div className="text-accent-300 text-base">
-              Global Collaborations
-            </div>
-          </div>
-        </div> */}
       </div>
 
       {/* Bottom Gradient Transition */}
