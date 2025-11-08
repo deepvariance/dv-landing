@@ -147,7 +147,7 @@ export default function ContactForm() {
           </div>
 
           {/* Contact Form */}
-          <div className="glass p-8 rounded-2xl">
+          <div className="glass-no-hover p-8 rounded-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* FormSubmit Configuration */}
               <input

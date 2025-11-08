@@ -72,11 +72,11 @@ module.exports = {
         glow: {
           "0%": {
             boxShadow:
-              "0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.05)",
+              "0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(59, 130, 246, 0.2)",
           },
           "100%": {
             boxShadow:
-              "0 0 30px rgba(255, 255, 255, 0.2), 0 0 60px rgba(255, 255, 255, 0.1)",
+              "0 0 50px rgba(255, 255, 255, 0.4), 0 0 100px rgba(147, 51, 234, 0.3)",
           },
         },
         float: {
@@ -88,12 +88,20 @@ module.exports = {
         "gradient-dark": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)",
         "gradient-surface": "linear-gradient(135deg, #111111 0%, #1a1a1a 100%)",
         "gradient-glow":
-          "radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(147, 51, 234, 0.1) 30%, transparent 70%)",
+          "radial-gradient(circle at center, rgba(59, 130, 246, 0.25) 0%, rgba(147, 51, 234, 0.2) 30%, rgba(236, 72, 153, 0.15) 50%, transparent 80%)",
+        "gradient-glow-danger":
+          "radial-gradient(circle at center, rgba(239, 68, 68, 0.25) 0%, rgba(220, 38, 38, 0.2) 30%, rgba(185, 28, 28, 0.15) 50%, transparent 80%)",
+        "gradient-glow-success":
+          "radial-gradient(circle at center, rgba(34, 197, 94, 0.25) 0%, rgba(22, 163, 74, 0.2) 30%, rgba(21, 128, 61, 0.15) 50%, transparent 80%)",
+        "gradient-glow-info":
+          "radial-gradient(circle at center, rgba(59, 130, 246, 0.25) 0%, rgba(37, 99, 235, 0.2) 30%, rgba(29, 78, 216, 0.15) 50%, transparent 80%)",
+        "gradient-glow-warning":
+          "radial-gradient(circle at center, rgba(251, 146, 60, 0.25) 0%, rgba(249, 115, 22, 0.2) 30%, rgba(234, 88, 12, 0.15) 50%, transparent 80%)",
       },
       boxShadow: {
-        glow: "0 0 20px rgba(255, 255, 255, 0.1)",
-        "glow-lg": "0 0 40px rgba(255, 255, 255, 0.15)",
-        "inner-glow": "inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+        glow: "0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(59, 130, 246, 0.2)",
+        "glow-lg": "0 0 50px rgba(255, 255, 255, 0.4), 0 0 100px rgba(147, 51, 234, 0.3)",
+        "inner-glow": "inset 0 1px 0 rgba(255, 255, 255, 0.2)",
         dark: "0 10px 30px rgba(0, 0, 0, 0.5)",
         "dark-lg": "0 20px 50px rgba(0, 0, 0, 0.7)",
       },

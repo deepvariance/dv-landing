@@ -127,6 +127,13 @@
   /* Glass Effect */
   .glass {
     @apply bg-surface-light/30 backdrop-blur-md border border-glow rounded-2xl
+           transition-all duration-300 hover:-translate-y-1 hover:border-glow-light
+           hover:bg-surface-light/40 hover:shadow-glow;
+  }
+
+  /* Glass Effect without hover (for forms) */
+  .glass-no-hover {
+    @apply bg-surface-light/30 backdrop-blur-md border border-glow rounded-2xl
            transition-all duration-300;
   }
 
@@ -162,21 +169,21 @@
     content: "";
     position: absolute;
     top: 0;
-    width: 400px;
+    width: 500px;
     height: 100%;
     pointer-events: none;
-    opacity: 0.3;
-    filter: blur(80px);
+    opacity: 0.25;
+    filter: blur(100px);
   }
 
   .section-glow::before {
     left: -200px;
-    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(147, 51, 234, 0.1) 30%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.3) 0%, rgba(147, 51, 234, 0.2) 30%, transparent 70%);
   }
 
   .section-glow::after {
     right: -200px;
-    background: radial-gradient(circle at center, rgba(236, 72, 153, 0.15) 0%, rgba(147, 51, 234, 0.1) 30%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(236, 72, 153, 0.3) 0%, rgba(147, 51, 234, 0.2) 30%, transparent 70%);
   }
 
   /* Premium Form Inputs */

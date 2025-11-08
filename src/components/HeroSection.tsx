@@ -13,7 +13,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-black text-white overflow-hidden min-h-[55vh] flex items-center">
+    <section className="relative bg-black text-white overflow-hidden min-h-[calc(100vh-4rem)] flex items-center">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video

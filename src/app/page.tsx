@@ -19,7 +19,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* The Problem */}
             <div className="glass p-8 space-y-4">
-              <div className="w-16 h-16 bg-gradient-glow rounded-2xl flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-glow-danger rounded-2xl flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
@@ -37,7 +37,7 @@ export default function HomePage() {
 
             {/* Our Solution */}
             <div className="glass p-8 space-y-4">
-              <div className="w-16 h-16 bg-gradient-glow rounded-2xl flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-glow-success rounded-2xl flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -166,7 +166,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Healthcare */}
             <div className="glass p-8 space-y-4">
-              <div className="w-16 h-16 bg-gradient-glow rounded-2xl flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-glow-success rounded-2xl flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
@@ -184,7 +184,7 @@ export default function HomePage() {
 
             {/* Finance */}
             <div className="glass p-8 space-y-4">
-              <div className="w-16 h-16 bg-gradient-glow rounded-2xl flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-glow-warning rounded-2xl flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -202,7 +202,7 @@ export default function HomePage() {
 
             {/* Logistics */}
             <div className="glass p-8 space-y-4">
-              <div className="w-16 h-16 bg-gradient-glow rounded-2xl flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-glow-info rounded-2xl flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
