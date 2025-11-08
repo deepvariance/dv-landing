@@ -37,7 +37,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/contact#contact-form" className="btn-ghost px-6 py-2">
+            <Link href="/contact" className="btn-ghost px-6 py-2">
               Get In Touch
             </Link>
           </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
               ))}
               <div className="pt-4 border-t border-glow mt-4">
                 <Link
-                  href="/contact#contact-form"
+                  href="/contact"
                   className="block w-full text-center btn-secondary py-3"
                   onClick={() => setIsMenuOpen(false)}
                 >

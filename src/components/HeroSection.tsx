@@ -22,13 +22,13 @@ export default function HeroSection() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-20 blur-sm"
+          className="w-full h-full object-cover opacity-40 md:opacity-30 blur-[2px] md:blur-sm"
         >
           <source src="/nodes.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/50 md:bg-black/60"></div>
       </div>
 
       {/* Animated Background Elements */}

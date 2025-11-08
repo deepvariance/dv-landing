@@ -127,8 +127,7 @@
   /* Glass Effect */
   .glass {
     @apply bg-surface-light/30 backdrop-blur-md border border-glow rounded-2xl
-           transition-all duration-300 hover:-translate-y-1 hover:border-glow-light
-           hover:bg-surface-light/40 hover:shadow-glow;
+           transition-all duration-300;
   }
 
   /* Glass Effect for Navbar (no border radius) */
